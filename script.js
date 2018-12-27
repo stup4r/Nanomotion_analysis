@@ -96,6 +96,7 @@ function showBars(alldata){
     datafilt = data.filter(d => d.varWin === chosenvarWin && d.fitWin === chosenfitWin);
 
     datafilt = datafilt.map(d => ({
+        profile: d.profile,
         code: d.code,
         fitWin: d.fitWin,
         varWin: d.varWin,
@@ -208,6 +209,7 @@ function showBars(alldata){
         datafilt = data.filter(d => d.varWin === chosenvarWin && d.fitWin === chosenfitWin);
 
         datafilt = datafilt.map(d => ({
+            profile: d.profile,
             code: d.code,
             fitWin: d.fitWin,
             varWin: d.varWin,
