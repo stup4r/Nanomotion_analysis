@@ -1,0 +1,45 @@
+FilePath,Bacteria,Drug,Code,Profile,FileMedia,FileDrug,DrugConc (mcrgpml),DrugDelay (min)
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\1septEcoli\100\,E. coli,Ceftriaxone,100,S,AlbBT.txt,Bceftriaxone2bBT.txt,2,32
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\1septEcoli\200\,E. coli,Ceftriaxone,200,S,AlbBT.txt,Bceftriaxone2bBT.txt,2,28
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\3septEcoli\107\,E. coli,Ceftriaxone,107,R,AlbBT.txt,Bceftriaxone2bBT1.txt,2,44
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\3septEcoli\207\,E. coli,Ceftriaxone,207,R,AlbBT.txt,Bceftriaxone2bBT1.txt,2,35
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\avg4Ecoli\101\,E. coli,Ciprofloxacin,101,R,AlbBT.txt,Bcip2concAnotherBT.txt,2,62
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\avg4Ecoli\102\,E. coli,Ciprofloxacin,102,S,AlbBT.txt,Bcip2concAnotherBT.txt,2,65
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\avg7Ecoli\103\,E. coli,Ciprofloxacin,103,R,AlbBT.txt,Bcip2aBT.txt,2,0
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\avg7Ecoli\104\,E. coli,Ciprofloxacin,104,S,AlbBT.txt,Bcip2aBT.txt,2,0
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\avg14Ecoli\105\,E. coli,Ciprofloxacin,105,R,AlbBT.txt,SecondAcip2aBT.txt,2,54
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\avg14Ecoli\106\,E. coli,Ciprofloxacin,106,S,AlbBT.txt,Bcip2bBT.txt,2,0
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\nov11nonblind\109R\,E. coli,Ampicillin,109,R,AlbBT.txt,Bamp16bBT.txt,16,33
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\nov11nonblind\209S\,E. coli,Ampicillin,209,S,AlbBT.txt,Bamp16aBT.txt,16,0
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\nov20\110\,E. coli,Ampicillin,110,S,Alb-BT.txt,Bamp16ugml-BT.txt,16,0
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\nov20\210c\,E. coli,Ampicillin,210,R,Alb-BT..txt,Bamp16-BT_1..txt,16,20
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\nov25\111\,E. coli,Ampicillin,111,R,AlbRealBT.txt,Bamp16BT.txt,16,0
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\nov25\211cDec2\,E. coli,Ampicillin,211,S,Blb-BT..txt,Camp16-BT..txt,16,0
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\nov26\112\,E. coli,Ampicillin,112,R,Alb-BT..txt,Bamp16-BT..txt,16,0
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\nov26\212\,E. coli,Ampicillin,212,S,Alb-BT..txt,Bamp16-BT_1..txt,16,0
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\oct7\108\,E. coli,Ceftriaxone,108,R,Alb.txt,Bceftriaxone2bBT.txt,2,40
+F:\D\Files\Prototype II\Bacteria\2015\CHUV\oct7\208\,E. coli,Ceftriaxone,208,R,AlbBT.txt,Bceftriaxone2aBT.txt,2,0
+F:\D\Files\Prototype II\Bacteria\2015\AB tests\ciprofloxacin\,E. coli,Ciprofloxacin,ABC,S,AlbBT.txt,BciprofloxacinbBT.txt,6,94
+F:\D\Files\Prototype II\Bacteria\2015\AB tests\kanamycin\,E. coli,Kanamycin,ABK,S,AlbBT.txt,BkanamycinbBT.txt,6,20
+F:\D\Files\Prototype II\Bacteria\2015\AB tests\ceftriaxone\,E. coli,Ceftriaxone,ABX,S,AlbBT.txt,BceftriaxonebBT.txt,6,20
+F:\D\Files\Prototype II\Bacteria\2015\april17\Exp1\,E. coli,Ampicillin,A17a,S,Amedia.txt,Damp03.txt,0.3,0
+F:\D\Files\Prototype II\Bacteria\2015\april17\Exp3\,E. coli,Ampicillin,A17c,S,Amedia.txt,Camp5.txt,5,0
+F:\D\Files\Prototype II\Bacteria\2015\april21\,B. pertussis,Ampicillin,A21,S,AmediaB.txt,Bamp03.txt,0.3,0
+F:\D\Files\Prototype II\Bacteria\2015\april22\,B. pertussis,Ampicillin,A22,S,Amedia.txt,Bamp1.txt,1,0
+F:\D\Files\Prototype II\Bacteria\2015\april28\Exp1\,B. pertussis,Ampicillin,A28,S,Amedia.txt,Bamp5.txt,5,0
+F:\D\Files\Prototype II\Bacteria\2015\feb11\,B. pertussis,Ampicillin,F11,S,Alb.txt,Bamp.txt,30,0
+F:\D\Files\Prototype II\Bacteria\2015\pseudomonas\14\,E. coli,Ceftazidime,P14,R,Alb.txt,Cdrug60b.txt,60,25
+F:\D\Files\Prototype II\Bacteria\2015\pseudomonas\9\,E. coli,Ceftazidime,P09,S,Alb.txt,Bceftazidine60.txt,60,50
+F:\D\Files\Prototype II\Bacteria\2016\Bordetella\jun14Tohama\,B. pertussis,Clarithromycin,BJ14,S,Ass-BT..txt,F5Claritro-BT..txt,5,0
+F:\D\Files\Prototype II\Bacteria\2016\Bordetella\jun17B2723\,B. pertussis,Clarithromycin,BJ17,S,Ass-BT..txt,C5Claritro-BT..txt,5,0
+F:\D\Files\Prototype II\Bacteria\2016\Bordetella\jun27tohama\,B. pertussis,Erythromycin,BJ27,S,Ass-BT..txt,F10Erythromycin-BT..txt,10,0
+F:\D\Files\Prototype II\Bacteria\2016\dec20GoldenApex\,S. aureus,Ceftriaxone,D20GA,S,Alb-BT..txt,Bcef40-BT..txt,40,60
+F:\july25ecoli\,E. coli,Ampicillin,J25E,S,Alb-BT..txt,Bamp40-BT..txt,40,0
+F:\jun17strepto\,S. pneumoniae,Ampicillin,J17ST,S,Athb-BT..txt,Famp10-BT..txt,10,0
+F:\may2strepto\,S. pneumoniae,Ampicillin,M2ST,S,AthbStiffAu-BT..txt,Bamp20StiffAu-BT..txt,20,0
+E:\D\Files\Prototype II\Bacteria\2017\august18\,E. coli,Ampicillin,A18E,S,AgrowthMedia.txt,Bampicillin.txt,30,0
+E:\D\Files\Prototype II\Bacteria\2017\july26Ecoli\,E. coli,Ampicillin,J26E,S,Amedia-BT..txt,Bamp30-BT..txt,30,0
+E:\D\Files\Prototype II\Bacteria\2017\march16mycobacteria\,M. smegmatis,Ciprofloxacin,M16MS,S,Blb-BT..txt,Ccipro20-BT..txt,20,0
+D:\Data\CHUV\res\,E. coli,Ceftriaxone,CHR1,R,dot-1 medium BT_01.txt,dot-2 antibiotic BT_02.txt,2,0
+D:\Data\CHUV\res2\,E. coli,Ceftriaxone,CHR2,R,dot-1 medium BT_01.txt,dot-2 antibiotic BT_02.txt,2,0
+D:\Data\CHUV\susc\,E. coli,Ceftriaxone,CHS,S,dot-1 medium BT_01.txt,dot-2 antibiotic BT_01.txt,2,0

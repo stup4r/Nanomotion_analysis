@@ -1,0 +1,73 @@
+
+h1{
+    font: 2.2em "Fira Sans", sans-serif;
+    color: #2e4053;
+    text-align: center;
+}
+
+.hlines{
+    height: 20px;
+    width: 100%;
+    background-color: #af7ac5;
+    margin: 0px 0px 20px 0px;
+}
+
+p, h2{
+    font-family: Avantgarde;
+    color: #2e4053; 
+}
+
+#secHeadline{
+    font: italic 2.2em "Fira Sans", serif;
+    color: #884ea0;
+}
+
+#allFiles, #filt, #filtersdiv{
+    text-align: center;
+}
+
+#metricdiv, #lineardiv, #vardiv{
+    display: inline-block;
+    width: 10%;    
+}
+#filtdiv, #outliersdiv{
+    display: inline-block;
+    width: 25%;  
+}
+
+select {
+    padding: 5px 15px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #2e4053;
+    height: 30px;
+    color: #2e4053;
+    /*background-color: #16a085;*/
+}
+#linePlotDiv, #slopePlotDiv1, #slopePlotDiv2{
+    display: inline-block;
+    width: 40%; 
+}
+.codes{
+    font-size: 18px;
+    color: grey;
+}
+.theClickedOne {
+    fill: #af7ac5 !important;
+}
+#barPlotChunksDiv, #histPlotDiv{
+    display: inline-block;
+    width: 60%; 
+}
+
+#tooltip{
+    position: absolute;
+    opacity: 0.8;
+    border: none;
+    display: none;
+    color: white;
+    background-color: #2e4053;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}

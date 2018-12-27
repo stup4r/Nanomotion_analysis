@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>    
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        
+        <title>Nanomotion investigation</title>
+        
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="">
+    </head>
+    
+    <body>
+    
+        <h1>Nanomotion Dataset</h1>
+        <h1 id="secHeadline">Exploration</h1>
+        
+        <div class="hlines"></div>
+        
+        <div id="filtersdiv">
+            <div id="filtdiv">
+                <p>Filter data?</p>
+                <select id="filtering">
+                    <option value="0">No filter</option>
+                    <option value="1">Moving average</option>
+                </select>
+            </div>
+
+            <div id="outliersdiv">
+                <p>Remove outliers?</p>
+                <select id="outliers">
+                    <option value="0">All data</option>
+                    <option value="1">Removed outliers</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="allFiles">
+            <h2>All-experiment overview</h2>
+            <p>Choose the metric and widnow sizes for the overview:</p>
+            
+            <div id="metricdiv">
+                <p>Metric:</p>
+                <select id="metric"></select>
+            </div>
+            <div id="lineardiv">
+                <p>Linear Fitting Window:</p>
+                <select id="fitWin"></select>
+            </div>    
+            <div id="vardiv">
+                <p>Variance Widnow:</p>
+                <select id="varWin"></select>
+            </div>
+                
+            <br>
+            <br>
+            <br>
+
+            
+            <div>
+                <svg id="allBars" width="1000" height="400">
+                    <g id="barbody" style="transform:translate(0px, -200px)"></g>
+                    <g id="barYaxis"></g>
+                    <g id="barXaxis"></g>
+                    <div id="tooltip">Tooltip</div>
+                </svg>
+            </div>
+       
+        </div>
+        <br>
+        <br>
+        <div id="singleExp">
+            
+            <div id="singlePlots">
+                
+                <div id="linePlotDiv">
+                    <svg id="linePlot" width="500" height="300">
+                        <g id="linebody"></g>
+                    </svg>
+                </div>
+                
+                <div id="slopePlotDiv1" style="width:300px;">
+                    <svg id="slopePlot1" width="300" height="300"></svg>
+                </div>
+                <div id="slopePlotDiv2" style="width:300px;">
+                    <svg id="slopePlot2" width="300" height="300"></svg>
+                </div>
+                
+                <div id="barPlotChunksDiv" style="width:500px;">
+                    <svg id="barPlotChunks" width="500" height="300"></svg>
+                </div>
+                
+                <div id="histPlotDiv" style="width:500px;">
+                    <svg id="histPlot" width="500" height="300"></svg>
+                </div>
+                
+            </div>
+            
+        
+        </div>
+        
+        
+    </body>
+    <script src="script.js"></script>   
+</html>
