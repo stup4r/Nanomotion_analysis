@@ -12,6 +12,11 @@
     </head>
     
     <body>
+        
+        <div id="overlay" onclick="HlpOff()">
+            <img id="hlpwn" src="additions/infoHowto.svg">
+        </div>
+        
         <div id="titlesvg">
             <img id="title" src="additions/title.svg" width="400" height="100">
         </div>
@@ -24,6 +29,9 @@
                     <option value="1">Moving average</option>
                 </select>
             </div>
+            <div id="helpicon">
+                <svg id="hlpicn" width="50" height="50" viewBox="0 0 68 68"><defs><style>.cls-1{fill:#999;}</style></defs><title>Click for help!</title><path class="cls-1" d="M34,68A34,34,0,1,1,68,34,34,34,0,0,1,34,68ZM34,5A29,29,0,1,0,63,34,29,29,0,0,0,34,5Z"/><path class="cls-1" d="M37.35,44.2H30.17c0-1,0-1.66,0-1.88a12.52,12.52,0,0,1,1.16-5.74,17.54,17.54,0,0,1,4.61-5.07,34.87,34.87,0,0,0,4.14-3.69,4.89,4.89,0,0,0,1-3,5.09,5.09,0,0,0-1.84-4,7.19,7.19,0,0,0-5-1.65,7.5,7.5,0,0,0-5,1.72,9.09,9.09,0,0,0-2.78,5.23l-7.27-.9a12.07,12.07,0,0,1,4.3-8.56q4-3.51,10.45-3.51,6.83,0,10.84,3.56a10.78,10.78,0,0,1,4,8.29A9.17,9.17,0,0,1,47.33,30,32.36,32.36,0,0,1,41,36.32a12.09,12.09,0,0,0-3.11,3.35A11.09,11.09,0,0,0,37.35,44.2ZM30.17,54.84V46.93h7.91v7.91Z"/></svg>
+            </div>
 
             <div id="outliersdiv">
                 <p>Remove outliers?</p>
@@ -32,11 +40,12 @@
                     <option value="1">Removed outliers</option>
                 </select>
             </div>
+        
         </div>
         
         <div id="allFiles">
     
-            <p class="colortxt">Choose the metric and widnow sizes for the overview:</p>
+            <p class="colortxt">Select the metric and the window sizes:</p>
             
             <div id="metricdiv">
                 <p>Metric:</p>
@@ -57,9 +66,7 @@
 
             
             <div>
-                <div id="tip1">
-                    <img src="additions/tip1.svg" width="100" height="100">
-                </div>
+
                 <svg id="allBars" width="1000" height="400">
                     <g id="barbody" style="transform:translate(0px, -200px)"></g>
                     <g id="barYaxis"></g>
@@ -71,9 +78,6 @@
         </div>
         <br>
         <br>
-        <div id="tip2" style="display: none;">
-            <img src="additions/tip2.svg" width="100" height="100">
-        </div>
  
             <div id="singlePlots">
 
@@ -114,12 +118,7 @@
                     
                     <div id="histPlotDiv" class="container col-lg-6 col-md-6 col-sm-12" style="width:600px;">
                         <svg id="histPlot" width="600" height="300"></svg>
-                    </div>
-                    
-                    <div id="tip3" style="display: none;" class="container col-lg-1 col-md-1 col-sm-1" style="width:100px;">
-                        <img src="additions/tip3.svg" width="100" height="100">
-                    </div>
-                    
+                    </div>                    
                     
                 </div>
                 

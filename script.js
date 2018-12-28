@@ -173,8 +173,6 @@ function showBars(alldata){
                     showTooltip(text, [d3.event.pageX, d3.event.pageY]);
                   })
                 .on("click", function(d){
-                    d3.select("#tip2").style("display", "block");
-                    d3.select("#tip3").style("display", "block");
                     d3.select(".theClickedOne").classed("theClickedOne", false);
                     d3.select(this).classed("theClickedOne", true);
                     selectedFile.code = d.code;
@@ -797,6 +795,20 @@ function histPlot(singleData){
     
     histsvg.append("g").attr("class", "histos")
     .attr("transform", "translate(0," + height + ")")
-    .call(xAxis);
-    
+    .call(xAxis);   
+}
+
+d3.select("#hlpicn")
+    .on("mouseover", function(){
+        d3.selectAll(".cls-1").style("fill", "#16a085")
+    })
+    .on("mouseleave", function(){
+        d3.selectAll(".cls-1").style("fill", "#999")
+    })
+    .on("click", function(){
+        d3.select("#overlay").style("display", "block");
+    })
+
+function HlpOff(){
+    d3.select("#overlay").style("display", "none");
 }
