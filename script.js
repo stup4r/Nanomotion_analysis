@@ -173,6 +173,8 @@ function showBars(alldata){
                     showTooltip(text, [d3.event.pageX, d3.event.pageY]);
                   })
                 .on("click", function(d){
+                    d3.select("#tip2").style("display", "block");
+                    d3.select("#tip3").style("display", "block");
                     d3.select(".theClickedOne").classed("theClickedOne", false);
                     d3.select(this).classed("theClickedOne", true);
                     selectedFile.code = d.code;
@@ -247,6 +249,7 @@ function range(start, end) {
 
 function showLines(data){
     data = data.map(d => ({
+        profile: d.profile,
         code: d.code,
         fitWin: d.fitWin,
         varWin: d.varWin,
@@ -296,10 +299,43 @@ function showLines(data){
 
     let timeMax = d3.max(data[1].time);
     xScale.domain([0, timeMax]);
-    yScale.domain(d3.extent(mediaData, function(d) {
-      return d.value;
-    }));
-
+    
+    let Mmax = d3.max(mediaData, function(d){return d.value});
+    let Mmin = d3.min(mediaData, function(d){return d.value});
+    let Dmax = d3.max(drugData, function(d){return d.value});
+    let Dmin = d3.min(drugData, function(d){return d.value});
+    
+    yScale.domain([Math.min(Mmin, Dmin), Math.max(Mmax, Dmax)]);
+    
+    var frmt = d3.format(".0f")
+    
+    // This part is for the number and profile letter
+    
+    d3.select("#profTxt").style("display","inline");
+    d3.select("#profTxt_sub").style("display","inline");
+    
+    d3.select("#profTxt")
+        .transition()
+        .duration(2500)
+        .on("start", function repeat() {
+          d3.active(this)
+              .tween("text", function() {
+                var that = d3.select(this),
+                    i = d3.interpolateNumber(that.text().replace(/,/g, ""), timeMax);
+                return function(t) { that.text(frmt(i(t))); };
+              })
+            .transition()
+              .delay(1500)
+              .on("start", repeat);
+        });
+    
+    d3.select("#profTxt2").style("display","inline");
+    d3.select("#profTxt_sub2").style("display","inline");
+    
+    d3.select("#profTxt2").text(data[0].profile)
+    
+    
+    
     var g = d3svg.append('g')
       .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 

@@ -12,11 +12,9 @@
     </head>
     
     <body>
-    
-        <h1>Nanomotion Dataset</h1>
-        <h1 id="secHeadline">Exploration</h1>
-        
-        <div class="hlines"></div>
+        <div id="titlesvg">
+            <img id="title" src="additions/title.svg" width="400" height="100">
+        </div>
         
         <div id="filtersdiv">
             <div id="filtdiv">
@@ -37,8 +35,8 @@
         </div>
         
         <div id="allFiles">
-            <h2>All-experiment overview</h2>
-            <p>Choose the metric and widnow sizes for the overview:</p>
+    
+            <p class="colortxt">Choose the metric and widnow sizes for the overview:</p>
             
             <div id="metricdiv">
                 <p>Metric:</p>
@@ -59,6 +57,9 @@
 
             
             <div>
+                <div id="tip1">
+                    <img src="additions/tip1.svg" width="100" height="100">
+                </div>
                 <svg id="allBars" width="1000" height="400">
                     <g id="barbody" style="transform:translate(0px, -200px)"></g>
                     <g id="barYaxis"></g>
@@ -70,36 +71,62 @@
         </div>
         <br>
         <br>
-        <div id="singleExp">
-            
+        <div id="tip2" style="display: none;">
+            <img src="additions/tip2.svg" width="100" height="100">
+        </div>
+ 
             <div id="singlePlots">
-                
-                <div id="linePlotDiv">
-                    <svg id="linePlot" width="500" height="300">
-                        <g id="linebody"></g>
-                    </svg>
+
+                <div class="row">
+                    
+                    <div id="linePlotDiv" class="container col-lg-6 col-md-12 col-sm-12" style="width:600px;">
+                        <svg id="linePlot" width="600" height="300">
+                            <g id="linebody"></g>
+                        </svg>
+                    </div>
+
+                    <div id="slopePlotDiv1" class="container col-lg-3 col-md-6 col-sm-12" style="width:300px;">
+                        <svg id="slopePlot1" width="300" height="300"></svg>
+                    </div>
+                    <div id="slopePlotDiv2" class="container col-lg-3 col-md-6 col-sm-12" style="width:300px;">
+                        <svg id="slopePlot2" width="300" height="300"></svg>
+                    </div>
+                    
                 </div>
                 
-                <div id="slopePlotDiv1" style="width:300px;">
-                    <svg id="slopePlot1" width="300" height="300"></svg>
-                </div>
-                <div id="slopePlotDiv2" style="width:300px;">
-                    <svg id="slopePlot2" width="300" height="300"></svg>
+                <div class="row">
+                
+
+                    <div id="barPlotChunksDiv" class="container col-lg-6 col-md-6 col-sm-12" style="width:600px;">
+                        <svg id="barPlotChunks" width="600" height="150"></svg>
+                        
+                    <div class="row" style="height:150px;">
+            
+                            <h1 id="profTxt" class="container col-lg-4 col-md-4 col-sm-4" style="display: none;" style="width:200px;">0</h1>
+                            <h2 id="profTxt_sub" class="container col-lg-1 col-md-1 col-sm-1" style="display: none;">min</h2>
+                        
+                            <h1 id="profTxt2" class="container col-lg-2 col-md-2 col-sm-2" style="display: none;" style="width:100px;"></h1>
+                            <h2 id="profTxt_sub2" class="container col-lg-1 col-md-1 col-sm-1" style="display: none;">susceptibility</h2>
+                     
+                    </div>
+                        
+                    </div>
+                    
+                    <div id="histPlotDiv" class="container col-lg-6 col-md-6 col-sm-12" style="width:600px;">
+                        <svg id="histPlot" width="600" height="300"></svg>
+                    </div>
+                    
+                    <div id="tip3" style="display: none;" class="container col-lg-1 col-md-1 col-sm-1" style="width:100px;">
+                        <img src="additions/tip3.svg" width="100" height="100">
+                    </div>
+                    
+                    
                 </div>
                 
-                <div id="barPlotChunksDiv" style="width:500px;">
-                    <svg id="barPlotChunks" width="500" height="300"></svg>
-                </div>
-                
-                <div id="histPlotDiv" style="width:500px;">
-                    <svg id="histPlot" width="500" height="300"></svg>
-                </div>
+
                 
             </div>
-            
-        
-        </div>
-        
+                    
         
     </body>
     <script src="script.js"></script>   
