@@ -11,7 +11,7 @@ function changeFilter(){
     selectedFile.filter = selectValueFilt.options[selectValueFilt.selectedIndex].value;
     let filename;
     if(selectedFile.filter == true){
-        filename = "data/testingFiltJson.json"}
+        filename = "data/dfOutputYesFilt.json"}
     else{
         filename = "data/dfOutputNoFilt.json"};
     loadFiles(filename);
@@ -457,32 +457,32 @@ function showSlopes(singleData){
     
     
      slopesvg.append("g")
-      .attr("class", "legend")
-    .selectAll("rect")
-      .data(data)
-    .enter().append("rect")
+        .attr("class", "legend")
+        .selectAll("rect")
+        .data(data)
+        .enter().append("rect")
         .attr("fill", function(d){
             if(d.metric == "mean"){return "#af7ac5"}
             else if(d.metric == "median"){return "#48c9b0"}
             else if(d.metric == "std"){return "#c58a7a"}
         })
-    .attr("y", (d,i) => i*15 + margin.top - 7)
-    .attr("x", width/2 - 15)
-     .attr("height", "10px").attr("width", "10px")
+         .attr("y", (d,i) => i*15 + margin.top - 7)
+         .attr("x", width/2 - 15)
+         .attr("height", "10px").attr("width", "10px")
     
-         slopesvg.append("g")
-      .attr("class", "legend")
-    .selectAll("text")
-      .data(data)
-    .enter().append("text")
-        .attr("fill", function(d){
+     slopesvg.append("g")
+         .attr("class", "legend")
+         .selectAll("text")
+         .data(data)
+         .enter().append("text")
+         .attr("fill", function(d){
             if(d.metric == "mean"){return "#af7ac5"}
             else if(d.metric == "median"){return "#48c9b0"}
             else if(d.metric == "std"){return "#c58a7a"}
         })
-    .attr("y", (d,i) => i*15 + margin.top)
-    .attr("x", width/2)
-      .text(d => d.metric).style("font-size", "14px");
+         .attr("y", (d,i) => i*15 + margin.top)
+         .attr("x", width/2)
+         .text(d => d.metric).style("font-size", "14px");
     
     
     
@@ -521,19 +521,25 @@ function showSlopes2(singleData){
         axis = d3.axisLeft(),
         foreground;
 
+    function checkNum(d){
+        if(!isNaN(d) && isFinite(d)){
+            return d;} else {
+                return 0;
+            }    
+    }
     let data = [
         {"metric":"kurtosis",
-        "media": singleData[0].kurtosis/singleData[0].kurtosis,
-        "drug": singleData[1].kurtosis/singleData[0].kurtosis},
+        "media": checkNum(singleData[0].kurtosis/singleData[0].kurtosis),
+        "drug": checkNum(singleData[1].kurtosis/singleData[0].kurtosis)},
         {"metric":"slope",
-        "media": singleData[0].slope/singleData[0].slope,
-        "drug": singleData[1].slope/singleData[0].slope},
+        "media": checkNum(singleData[0].slope/singleData[0].slope),
+        "drug": checkNum(singleData[1].slope/singleData[0].slope)},
         {"metric":"intercept",
-        "media": singleData[0].intercept/singleData[0].intercept,
-        "drug": singleData[1].intercept/singleData[0].intercept},
+        "media": checkNum(singleData[0].intercept/singleData[0].intercept),
+        "drug": checkNum(singleData[1].intercept/singleData[0].intercept)},
         {"metric":"skew",
-        "media": singleData[0].skew/singleData[0].skew,
-        "drug": singleData[1].skew/singleData[0].skew}  
+        "media": checkNum(singleData[0].skew/singleData[0].skew),
+        "drug": checkNum(singleData[1].skew/singleData[0].skew)}
     ];
     
     dimensions = ["media", "drug"]
@@ -545,7 +551,7 @@ function showSlopes2(singleData){
         .domain(d3.extent(dataVals))
         .range([height*0.9, height*0.3]);
 
-  foreground = slopesvg.append("g")
+    foreground = slopesvg.append("g")
                 .attr("class", "foreground")
                 .selectAll("path")
                 .data(data)
@@ -559,47 +565,47 @@ function showSlopes2(singleData){
                 .attr("stroke-width", "2px")
                 .attr("d", path).call(transition);
     
-slopesvg.append("g")
-      .attr("class", "legend")
-    .selectAll("rect")
-      .data(data)
-    .enter().append("rect")
+    slopesvg.append("g")
+        .attr("class", "legend")
+        .selectAll("rect")
+        .data(data)
+        .enter().append("rect")
         .attr("fill", function(d){
                     if(d.metric == "kurtosis"){return "#af7ac5"}
                     else if(d.metric == "slope"){return "#48c9b0"}
                     else if(d.metric == "intercept"){return "#c58a7a"}
                     else if(d.metric == "skew"){return "#7ab6c5"}
         })
-    .attr("y", (d,i) => i*15 + margin.top - 7)
-    .attr("x", width/2 - 15)
-     .attr("height", "10px").attr("width", "10px")
+        .attr("y", (d,i) => i*15 + margin.top - 7)
+        .attr("x", width/2 - 15)
+        .attr("height", "10px").attr("width", "10px")
     
-         slopesvg.append("g")
-      .attr("class", "legend")
-    .selectAll("text")
-      .data(data)
-    .enter().append("text")
-        .attr("fill", function(d){
-                    if(d.metric == "kurtosis"){return "#af7ac5"}
-                    else if(d.metric == "slope"){return "#48c9b0"}
-                    else if(d.metric == "intercept"){return "#c58a7a"}
-                    else if(d.metric == "skew"){return "#7ab6c5"}
+     slopesvg.append("g")
+         .attr("class", "legend")
+         .selectAll("text")
+         .data(data)
+         .enter().append("text")
+         .attr("fill", function(d){
+                if(d.metric == "kurtosis"){return "#af7ac5"}
+                else if(d.metric == "slope"){return "#48c9b0"}
+                else if(d.metric == "intercept"){return "#c58a7a"}
+                else if(d.metric == "skew"){return "#7ab6c5"}
         })
-    .attr("y", (d,i) => i*15 + margin.top)
-    .attr("x", width/2)
-      .text(d => d.metric).style("font-size", "14px");
+        .attr("y", (d,i) => i*15 + margin.top)
+        .attr("x", width/2)
+        .text(d => d.metric).style("font-size", "14px");
     
 
   var g = slopesvg.selectAll(".dimension")
-      .data(dimensions)
-    .enter().append("g")
-      .attr("class", "dimension")
-      .attr("transform", function(d) { return "translate(" + x(d) + ")"; });
+        .data(dimensions)
+        .enter().append("g")
+        .attr("class", "dimension")
+        .attr("transform", function(d) { return "translate(" + x(d) + ")"; });
 
   g.append("g")
       .attr("class", "slopeaxis")
       .each(function(d) { d3.select(this).call(axis.scale(y).ticks(2)); })
-    .append("text")
+      .append("text")
       .style("text-anchor", "middle")
       .attr("y", margin.top)
       .text(function(d) { return d; }).attr("fill", "#2e4053").style("font-size", "14px");
